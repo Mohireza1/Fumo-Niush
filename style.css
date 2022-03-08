@@ -1,0 +1,36 @@
+@font-face {
+  font-family: IRANSansXLight;
+  src: url(fonts/IRANSansXLight.ttf);
+}
+@font-face {
+  font-family: IRANSansXBold;
+  src: url(fonts/IRANSansXBold.ttf);
+}
+@font-face {
+  font-family: IRANSansXRegular;
+  src: url(fonts/IRANSansXRegular.ttf);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --step-0: clamp(1rem, calc(0.88rem + 0.63vw), 1.5rem);
+
+  --bg-clr: rgb(231, 245, 244);
+}
+html {
+  height: 100%;
+  font-size: var(--step-0);
+  background-color: var(--bg-clr);
+}
+body {
+  min-height: 100%;
+  max-width: 1620px;
+  padding: 2rem;
+  margin: auto;
+  font-family: "IRANSansXLight";
+}
