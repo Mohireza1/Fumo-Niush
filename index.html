@@ -18,7 +18,18 @@
       href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
       rel="stylesheet"
     />
-
+    <script
+      src="https://kit.fontawesome.com/4cc8f1177f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-32x32.png" />
@@ -27,56 +38,57 @@
   </head>
   <body>
     <header>
-      <h1>
-        <span class="material-icons-outlined" style="font-size: 2rem">
-          cookie </span
-        >فروشگاه فومو نیوش
-      </h1>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#">صفحه اصلی</a></li>
-          <li><a href="#">دسته بندی ها</a></li>
-          <li><a href="#">پیشنهادات ویژه</a></li>
-          <li><a href="#">قرعه کشی</a></li>
-          <li><a href="#">تماس با ما</a></li>
-        </ul>
-      </nav>
-      <nav class="user-nav">
-        <ul>
-          <li>
-            <a href="#"
-              ><span class="material-icons-outlined"> account_circle </span>
-            </a>
-          </li>
-          <li>
-            <a href="#"
-              ><span class="material-icons-outlined"> shopping_bag </span></a
-            >
-          </li>
-          <li>
-            <a href="#"
-              ><span class="material-icons-outlined"> logout </span></a
-            >
-          </li>
-        </ul>
-      </nav>
+      <div class="logo">
+        <ion-icon name="logo-octocat"></ion-icon>
+        <h1><span class="primary-span">فومو</span> نیوش</h1>
+      </div>
     </header>
     <main>
+      <div class="navbars">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#">صفحه اصلی</a></li>
+            <li><a href="#">دسته بندی ها</a></li>
+            <li><a href="#">پیشنهادات ویژه</a></li>
+            <li><a href="#">قرعه کشی</a></li>
+            <li><a href="#">تماس با ما</a></li>
+          </ul>
+        </nav>
+        <nav class="user-nav">
+          <ul>
+            <li>
+              <a href="#"><ion-icon name="person-outline"></ion-icon></a>
+            </li>
+            <li>
+              <a href="#"><ion-icon name="search-outline"></ion-icon></a>
+            </li>
+            <li>
+              <a href="#"><ion-icon name="bag-outline"></ion-icon></a>
+            </li>
+            <li>
+              <a href="#"><ion-icon name="log-out-outline"></ion-icon></a>
+            </li>
+          </ul>
+        </nav>
+        <a href="#"><ion-icon name="menu-outline" id="menu"></ion-icon></a>
+      </div>
       <div class="hero" id="hero">
         <img
           src="images/fumo_hero.svg"
           alt="a bunch of fumos sitting next to each other"
+          class="hero-img"
         />
         <div class="hero-content">
-          <a href="#products" class="hero-jump">دیدن فوموها!</a>
-          <p class="hero-text">
+          <h3 class="hero-text">
             همین حالا یه فومو ازمون بخر تا تو قرعه کشی بزرگ فومو نیوش شرکت داده
             بشی
-          </p>
+          </h3>
+          <a href="#products" class="hero-jumper">دیدن فوموها</a>
         </div>
       </div>
       <div class="main products" id="products">
         <h2>پرفروش ترین ها</h2>
+        <hr />
         <div class="product">
           <div class="product-detail">
             <img src="images/001.svg" alt="red fumo" class="product-img" />
@@ -223,6 +235,17 @@
           </div>
         </div>
         <a href="#" class="all-products">همه ی محصولات</a>
+      </div>
+      <div class="big-poster">
+        <img
+          src="images/fumo poster.jpg"
+          alt="poster of fumos"
+          class="big-poster-img"
+        />
+        <div class="big-poster-textbox">
+          <h3>خاص ترین فوموهای فومو نیوش</h3>
+          <p></p>
+        </div>
       </div>
       <div class="features" id="features">
         <div class="feature">
@@ -399,6 +422,46 @@
           </div>
         </div>
       </div>
+      <div class="about-us">
+        <h2>درباره ی فومو نیوش</h2>
+        <p>
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+          استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
+          ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و
+          کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی
+          در شصت و سه درصد گذشته حال و آینده قرار گیرد.
+        </p>
+      </div>
     </main>
+    <footer>
+      <div class="references">
+        <a href="#" class="reference-link">لینک تست</a>
+        <a href="#" class="reference-link">لینک تست</a>
+        <a href="#" class="reference-link">لینک تست</a>
+        <a href="#" class="reference-link">لینک تست</a>
+      </div>
+      <div class="contact-info">
+        <div class="text-contact">
+          <div class="contact-text-box">
+            <p><strong>شماره تلفن:</strong>+۲۱۲۲۲۲۲۲</p>
+          </div>
+          <div class="contact-text-box">
+            <p><strong>آدرس ایمیل:</strong>hello@hello.com</p>
+          </div>
+          <div class="contact-text-box">
+            <p>
+              <strong>آدرس:</strong>خیابان سلام - کوچه سلام - جنب سلام - پلاک ۱۰
+            </p>
+          </div>
+        </div>
+        <div class="social-media-links">
+          <h3>ما رو تو شبکه های اجتماعی دنبال کنید:</h3>
+          <i class="fa-brands fa-instagram"><a href="#"></a></i>
+          <i class="fa-brands fa-telegram"><a href="#"></a></i>
+          <i class="fa-brands fa-twitter"><a href="#"></a></i>
+          <i class="fa-brands fa-github"><a href="#"></a></i>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

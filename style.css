@@ -10,6 +10,10 @@
   font-family: IRANSansXRegular;
   src: url(fonts/IRANSansXRegular.ttf);
 }
+@font-face {
+  font-family: IRANSansXExtraBold;
+  src: url(fonts/IRANSansXExtraBold.ttf);
+}
 *,
 *::before,
 *::after {
@@ -19,8 +23,10 @@
 }
 :root {
   --step-0: clamp(1rem, calc(0.88rem + 0.63vw), 1.5rem);
-
   --bg-clr: rgb(231, 245, 244);
+  --content-bg-clr: rgb(255, 255, 255);
+  --content-clr: #050505;
+  --hr-clr: rgb(141, 141, 141);
 }
 html {
   height: 100%;
@@ -29,8 +35,130 @@ html {
 }
 body {
   min-height: 100%;
-  max-width: 1620px;
-  padding: 2rem;
+  color: var(--content-clr);
   margin: auto;
   font-family: "IRANSansXLight";
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+h2,
+h3 {
+  font-family: IRANSansXBold;
+}
+hr {
+  background-color: var(--hr-clr);
+  border: none;
+  height: 1px;
+  width: 75%;
+  border-radius: 20px;
+  margin: 1rem;
+  opacity: 20%;
+}
+/* =====Start Here===== */
+.primary-span {
+  color: var(--primary-clr);
+}
+/* ===Header=== */
+/* =Logo= */
+header {
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--content-bg-clr);
+}
+header .logo {
+  font-size: 0.9rem;
+  font-family: IRANSansXExtraBold;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+logo ion-icon {
+  font-size: 2rem;
+}
+/* =Navbars= */
+.navbars {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0.65rem 0.7rem 0.5rem 0.7rem;
+  margin-block-start: -0.6rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--content-bg-clr);
+}
+.navbars ul {
+  list-style: none;
+}
+.navbars a {
+  text-decoration: none;
+  color: black;
+}
+.main-nav {
+  display: none;
+}
+.user-nav ul {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row-reverse;
+}
+ion-icon {
+  font-size: 1.5rem;
+}
+/* ===Hero=== */
+.hero {
+  min-height: 85vh;
+  display: grid;
+  place-items: center;
+  position: relative;
+  text-align: center;
+  background-color: rgb(20, 20, 20);
+}
+.hero-img {
+  object-fit: cover !important;
+  height: 100%;
+  mix-blend-mode: overlay;
+}
+.hero-content {
+  position: absolute;
+  color: white;
+  padding: 1rem;
+}
+.hero-jumper {
+  display: inline-block;
+  width: 50%;
+  margin-block-start: 1.5rem;
+  padding: 1rem;
+  background-color: var(--content-bg-clr);
+  text-decoration: none;
+  color: var(--content-clr);
+  border-radius: 50px;
+  font-family: IRANSansXRegular;
+  max-width: 250px;
+}
+/* ===Main & Products=== */
+/* =Main= */
+.main {
+  background-color: var(--content-bg-clr);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+.product {
+  border-radius: 20px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
 }
