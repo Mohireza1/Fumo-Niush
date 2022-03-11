@@ -14,6 +14,10 @@
   font-family: IRANSansXExtraBold;
   src: url(fonts/IRANSansXExtraBold.ttf);
 }
+@font-face {
+  font-family: IRANSansXMedium;
+  src: url(fonts/IRANSansXMedium.ttf);
+}
 *,
 *::before,
 *::after {
@@ -157,7 +161,7 @@ ion-icon {
   width: 100%;
   grid-template-columns: repeat(2, 1fr);
   font-size: 0.7rem;
-  gap: 0.5rem;
+  gap: 0.7rem;
 }
 .product {
   border-radius: 15px;
@@ -168,6 +172,12 @@ ion-icon {
   padding: 1rem;
   margin: auto;
   width: 100%;
+  min-height: 275px;
+  position: relative;
+  transition: all 0.15s ease;
+}
+.product:hover {
+  transform: scale(1.05);
 }
 .product-img {
   width: 100%;
@@ -185,6 +195,7 @@ ion-icon {
 .product-dynamic {
   width: 100%;
   display: flex;
+  font-family: IRANSansXMedium;
   justify-content: space-between;
   align-items: center;
   margin-block-start: 0.7rem;
@@ -241,4 +252,80 @@ ion-icon {
   display: grid;
   place-items: center;
   font-family: IRANSansXBold;
+}
+/* ===Discount=== */
+.product-dynamic-discount {
+  width: 100%;
+  display: flex;
+  font-family: IRANSansXMedium;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-start: 2.2rem;
+  padding-inline: 0.2rem;
+  gap: 1rem;
+  opacity: 85%;
+}
+.product-dynamic-discount .price {
+  color: var(--hr-clr);
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+.product-dynamic-discount .price::before {
+  content: "۲۰۰۰۰ تومان";
+  position: absolute;
+  color: var(--content-clr);
+  bottom: calc(37px + 1.5vw);
+  opacity: 100%;
+  font-size: 135%;
+}
+/* ===Big Poster=== */
+.big-poster {
+  /* background: #252525; */
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 0.5rem;
+  overflow: hidden;
+}
+.poster-overlay {
+  background-color: #252525;
+  border-radius: 20px;
+}
+.big-poster-img {
+  height: 90vh;
+  object-fit: cover;
+  mix-blend-mode: overlay;
+  border-radius: 20px;
+}
+.big-poster-textbox {
+  position: absolute;
+  color: white;
+  padding: 1rem;
+  font-family: IRANSansXExtraBold;
+}
+/* ===Features=== */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-block: 1rem;
+  padding: 1rem;
+}
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  font-family: IRANSansXMedium;
+}
+.feature-icon {
+  display: grid;
+  place-items: center;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  border-radius: 50%;
 }
