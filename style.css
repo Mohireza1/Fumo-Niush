@@ -31,6 +31,9 @@
   --content-bg-clr: rgb(255, 255, 255);
   --content-clr: #050505;
   --hr-clr: rgb(141, 141, 141);
+  --primary-clr: #c62828;
+  --contrary-clr: #a5a7dd;
+  --primary-shade: #ea4b42;
 }
 html {
   height: 100%;
@@ -328,4 +331,72 @@ ion-icon {
   color: white;
   padding: 1rem;
   border-radius: 50%;
+}
+/* ===Collections=== */
+.collection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.collection-textbox {
+  max-width: 60ch;
+  font-size: 0.9rem;
+  margin-block: 1.5rem;
+  opacity: 90%;
+}
+.collection-textbox h2 {
+  margin-block-end: 0.5rem;
+}
+.collection-item {
+  display: flex;
+  align-content: stretch;
+  align-items: stretch;
+  padding: 1rem 0rem 1rem 1rem;
+  font-size: 0.7rem;
+  margin-block: 1.5rem;
+  background-color: var(--content-bg-clr);
+}
+.collection-item-img-container {
+  width: 100%;
+  max-width: 300px;
+  place-self: center;
+  overflow: hidden;
+  margin-block-end: 1rem;
+  flex: 3;
+}
+.collection-item-img {
+  width: 60%;
+  margin: auto;
+}
+.collection-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex: 5;
+  flex-direction: column;
+}
+.collection-item h3 {
+  margin-block-end: 0.2rem;
+}
+.collection-item-gallery {
+  display: flex;
+  gap: 1rem;
+  display: none;
+}
+.collection-item-gallery-img {
+  border-radius: 5px;
+  width: 12.5%;
+  height: auto;
+  object-fit: cover;
+}
+.collection-btn,
+.collection-item-gallery,
+.collection-price {
+  margin-block-start: 0.7rem;
+}
+.collection-price {
+  font-size: 0.9rem;
+  font-family: IRANSansXMedium;
+  align-self: flex-end;
+  justify-self: flex-end;
 }
