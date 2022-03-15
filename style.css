@@ -69,6 +69,10 @@ hr {
 p {
   line-height: 1.5;
 }
+.shadow {
+  -webkit-box-shadow: 0px 0px 6px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 6px -2px rgba(0, 0, 0, 0.2);
+}
 /* =====Start Here===== */
 .primary-span {
   color: var(--primary-clr);
@@ -106,6 +110,8 @@ logo ion-icon {
   top: 0;
   z-index: 100;
   background-color: var(--content-bg-clr);
+  -webkit-box-shadow: 0px 10px 15px -10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 15px -10px rgba(0, 0, 0, 0.1);
 }
 .navbars ul {
   list-style: none;
@@ -145,16 +151,23 @@ ion-icon {
   padding: 1rem;
 }
 .hero-jumper {
+  border: 5px solid transparent;
   display: inline-block;
-  width: 50%;
+  width: 60%;
   margin-block-start: 1.5rem;
   padding: 1rem;
-  background-color: var(--content-bg-clr);
+  background-color: var(--primary-clr);
   text-decoration: none;
-  color: var(--content-clr);
+  color: white;
   border-radius: 50px;
   font-family: IRANSansXRegular;
   max-width: 250px;
+  transition: all 0.2s ease;
+}
+.hero-jumper:hover {
+  border: 5px solid var(--primary-clr);
+  background-color: transparent;
+  color: var(--primary-clr);
 }
 /* ===Main & Products=== */
 /* =Main= */
@@ -181,6 +194,8 @@ ion-icon {
   min-height: 275px;
   position: relative;
   transition: all 0.15s ease;
+  -webkit-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.1);
 }
 .product:hover {
   transform: scale(1.05);
@@ -223,10 +238,16 @@ ion-icon {
   width: 100%;
   text-align: center;
   padding: 1rem;
-  background-color: var(--content-bg-clr);
+  background-color: var(--primary-clr);
   border-radius: 15px;
   text-decoration: none;
-  color: var(--content-clr);
+  color: white;
+  -webkit-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+.all-products:hover {
+  transform: translate(-0.2%, -0.7%);
 }
 /* ===Poster=== */
 .poster {
@@ -241,6 +262,8 @@ ion-icon {
   min-height: 150px;
   display: grid;
   place-items: center;
+  -webkit-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.1);
 }
 .poster:hover {
   background-size: 105%;
@@ -322,7 +345,14 @@ ion-icon {
   gap: 2rem;
   margin-block: 1rem;
   padding: 1rem;
-  background-color: var(--content-bg-clr);
+  background-image: url(images/fumo_poster.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #131313;
+  background-blend-mode: overlay;
+  color: white;
 }
 .feature {
   display: flex;
@@ -337,7 +367,7 @@ ion-icon {
 .feature-icon {
   display: grid;
   place-items: center;
-  background-color: black;
+  background-color: var(--primary-clr);
   color: white;
   padding: 1rem;
   border-radius: 50%;
@@ -415,6 +445,7 @@ ion-icon {
 }
 .collection-item h3 {
   margin-block-end: 0.2rem;
+  /* color: var(--contrary-clr); */
 }
 .collection-item-gallery {
   display: flex;
@@ -440,23 +471,12 @@ ion-icon {
 }
 /* ===Feed=== */
 .subscribe {
-  background-image: url(images/fumo_poster.svg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-color: #131313;
-  background-blend-mode: overlay;
-  padding: 1rem;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 1rem;
-  text-align: center;
   box-sizing: border-box;
-  min-height: 255px;
 }
 .input-email {
   width: 100%;
@@ -479,6 +499,8 @@ label {
   height: 100%;
   font-family: IRANSansXRegular;
   box-sizing: border-box;
+  -webkit-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.1);
 }
 .email:hover {
   border: 1px solid rgb(102, 102, 243);
@@ -498,7 +520,8 @@ label {
   cursor: pointer;
   max-width: 290px;
   min-height: 43px;
-
+  -webkit-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.1);
   flex: 1;
 }
 .submit:hover {
@@ -552,6 +575,8 @@ label {
   color: white;
   cursor: pointer;
   transition: all 0.15s ease;
+  -webkit-box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.15);
 }
 .category-poster:nth-child(1) {
   background-image: url(images/001.svg);
@@ -575,7 +600,9 @@ label {
   background-color: var(--content-bg-clr);
   color: var(--content-clr);
   padding: 1rem;
-  margin-block: -1rem 0;
+}
+.about-us h2 {
+  color: var(--primary-clr);
 }
 .about-us p {
   margin-block-start: 0.3rem;
@@ -589,10 +616,19 @@ footer {
   color: whitesmoke;
   font-size: 0.85rem;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: space-between;
   align-items: space-between;
-  flex-direction: column-reverse;
+  flex-direction: column;
+}
+.social ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  font-size: 2rem;
+  gap: 2rem;
+  justify-content: center;
+  margin-block-start: 0.4rem;
 }
 .references {
   display: flex;
